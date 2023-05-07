@@ -5,6 +5,10 @@
         {% block title %}{% endblock title %}
     </head>
     <body>
+        <p>
+            <a href="{% url 'cptracker:index' %}">Homepage</a> -
+            <a href="{% url 'cptracker:portfolios' %}">Portfolios</a>
+        </p>
         {% block content %}{% endblock content %}
     </body>
 </html>
