@@ -11,3 +11,8 @@ def portfolios(request):
     portfolios =  models.Portfolio.objects.order_by('name')
     context = {'portfolios': portfolios}
     return render(request, 'cptracker/portfolios.html', context)
+
+def portfolio(request, portfolio_id):
+    portfolio = models.Portfolio.objects.get(id=portfolio_id)
+    context = {'portfolio': portfolio}
+    return render(request, 'cptracker/portfolio.html', context)

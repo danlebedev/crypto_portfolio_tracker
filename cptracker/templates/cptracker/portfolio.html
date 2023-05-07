@@ -1,0 +1,16 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}
+<title>Portfolio</title>
+{% endblock title %}
+
+{% block content %}
+<h1>Portfolio</h1>
+<ul>
+    <li>
+        <h2>{{ portfolio.name }}</h2>
+        <p>{{ portfolio.balance }}</p>
+        <p>{{ portfolio.date_added }}</p>
+    </li>
+</ul>
+{% endblock %}

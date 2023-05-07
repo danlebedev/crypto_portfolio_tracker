@@ -5,12 +5,18 @@
 {% endblock title %}
 
 {% block content %}
+<h1>Portfolios</h1>
 <ul>
-    <h1>Portfolios</h1>
     {% for portfolio in portfolios %}
-    <h2>{{ portfolio.name }}</h2>
-    <p>{{ portfolio.balance }}</p>
-    <p>{{ portfolio.date_added }}</p>
+    <li>
+        <h2>
+            <a href="{% url 'cptracker:portfolio' portfolio.pk %}">
+                {{ portfolio.name }}
+            </a>
+        </h2>
+        <p>{{ portfolio.balance }}</p>
+        <p>{{ portfolio.date_added }}</p>
+    </li>
     {% empty %}
     <li>
         There are no entries...
