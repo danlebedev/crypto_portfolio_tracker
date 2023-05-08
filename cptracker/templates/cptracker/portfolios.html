@@ -5,7 +5,10 @@
 {% endblock title %}
 
 {% block content %}
-<h1>Portfolios</h1>
+<h1>
+    Portfolios
+    <a href="{% url 'cptracker:add_portfolio' %}">Add new portfolio</a>
+</h1>
 <ul>
     {% for portfolio in portfolios %}
     <li>
