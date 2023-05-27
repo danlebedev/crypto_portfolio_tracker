@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        {% block title %}{% endblock title %}
+    </head>
+    <body>
+        <p>
+            <a href="{% url 'main:index' %}">Homepage</a> -
+            <a href="{% url 'cptracker:index' %}">Crypto Portfolio Tracker</a> -
+            <a href="{% url 'cptracker:portfolios' %}">Portfolios</a>
+        </p>
+        {% block content %}{% endblock content %}
+    </body>
+</html>

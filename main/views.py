@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+from . import models
+
+
+def index(request):
+    asset = models.Asset.objects.order_by('short_name')
+    context = {'asset': asset}
+    return render(request, 'main/index.html', context)
