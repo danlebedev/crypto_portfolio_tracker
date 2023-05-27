@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # My apps.
+    'main',
     'cptracker',
 
     # Django default apps.
