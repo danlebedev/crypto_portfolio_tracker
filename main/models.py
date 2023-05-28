@@ -14,5 +14,5 @@ class Asset(models.Model):
 
     asset_type = models.SmallIntegerField(
         choices=AssetTypes.choices,
-        default=AssetTypes.CURRENCY,
+        default=AssetTypes.CRYPTOCURRENCY,
     )
