@@ -16,6 +16,11 @@ def assets(request):
     }
     return render(request, 'main/assets.html', context)
 
+def asset(request, asset_id):
+    asset = models.Asset.objects.get(id=asset_id)
+    context = {'asset': asset}
+    return render(request, 'main/asset.html', context)
+
 class AssetCreateView(CreateView):
     template_name = 'main/add_asset.html'
     form_class = forms.AssetForm

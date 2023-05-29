@@ -1,0 +1,16 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}
+<title>Asset</title>
+{% endblock title %}
+
+{% block content %}
+<h1>Asset</h1>
+<ul>
+    <li>
+        <h2>{{ asset.short_name }}</h2>
+        <p>{{ asset.name }}</p>
+        <p>{{ asset.asset_type }}</p>
+    </li>
+</ul>
+{% endblock %}

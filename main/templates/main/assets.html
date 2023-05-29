@@ -12,7 +12,12 @@
 <ul>
     {% for asset in assets %}
     <li>
-        {{ asset.short_name }} - {{ asset.name }}
+        <h2>
+            <a href="{% url 'main:asset' asset.pk %}">
+                {{ asset.short_name }}
+            </a>
+        </h2>
+        <p>{{ asset.name }}</p>
     </li>
     {% empty %}
     <li>
