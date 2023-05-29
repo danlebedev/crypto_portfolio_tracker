@@ -11,6 +11,7 @@
         <h2>{{ asset.short_name }}</h2>
         <p>{{ asset.name }}</p>
         <p>{{ asset.asset_type }}</p>
+        <a href="{% url 'main:change_asset' asset.pk %}">Change asset</a>
     </li>
 </ul>
 {% endblock %}
