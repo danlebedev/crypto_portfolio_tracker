@@ -8,5 +8,6 @@ urlpatterns = [
     # Homepage.
     path('', views.index, name='index'),
     # Assets
-    path('add/', views.AssetCreateView.as_view(), name='add_asset'),
+    path('assets/', views.assets, name='assets'),
+    path('assets/add/', views.AssetCreateView.as_view(), name='add_asset'),
 ]

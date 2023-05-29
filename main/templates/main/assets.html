@@ -1,0 +1,23 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}
+<title>Assets</title>
+{% endblock title %}
+
+{% block content %}
+<h1>
+    Assets
+    <a href="{% url 'main:add_asset' %}">Add asset</a>
+</h1>
+<ul>
+    {% for asset in assets %}
+    <li>
+        {{ asset.short_name }} - {{ asset.name }}
+    </li>
+    {% empty %}
+    <li>
+        There are no assets...
+    </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

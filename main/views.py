@@ -7,9 +7,14 @@ from . import forms
 
 
 def index(request):
+    return render(request, 'main/index.html')
+
+def assets(request):
     assets = models.Asset.objects.order_by('short_name')
-    context = {'assets': assets}
-    return render(request, 'main/index.html', context)
+    context = {
+        'assets': assets,
+    }
+    return render(request, 'main/assets.html', context)
 
 class AssetCreateView(CreateView):
     template_name = 'main/add_asset.html'

@@ -7,7 +7,7 @@
 {% block content %}
 <h1>
     Portfolios
-    <a href="{% url 'cptracker:add_portfolio' %}">Add new portfolio</a>
+    <a href="{% url 'cptracker:add_portfolio' %}">Add portfolio</a>
 </h1>
 <ul>
     {% for portfolio in portfolios %}
@@ -22,7 +22,7 @@
     </li>
     {% empty %}
     <li>
-        There are no entries...
+        There are no portfolios...
     </li>
     {% endfor %}
 </ul>
