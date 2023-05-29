@@ -11,6 +11,9 @@
         <h2>{{ portfolio.name }}</h2>
         <p>{{ portfolio.balance }}</p>
         <p>{{ portfolio.date_added }}</p>
+        <a href="{% url 'cptracker:change_portfolio' portfolio.pk %}">
+            Change portfolio
+        </a>
     </li>
 </ul>
 {% endblock %}

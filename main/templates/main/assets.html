@@ -18,7 +18,9 @@
             </a>
         </h2>
         <p>{{ asset.name }}</p>
-        <a href="{% url 'main:change_asset' asset.pk %}">Change asset</a>
+        <a href="{% url 'main:change_asset' asset.pk %}">
+            Change asset
+        </a>
     </li>
     {% empty %}
     <li>
