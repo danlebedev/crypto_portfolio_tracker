@@ -4,3 +4,4 @@ from . import models
 
 
 admin.site.register(models.Portfolio)
+admin.site.register(models.UserAsset)
