@@ -9,8 +9,19 @@
 <ul>
     <li>
         <h2>{{ portfolio.name }}</h2>
-        <p>{{ portfolio.balance }}</p>
         <p>{{ portfolio.date_added }}</p>
+        <ul>
+            {% for asset in assets %}
+            <li>
+                {{ asset.short_name }} - {{ asset.balance }}
+            </li>
+            {% empty %}
+            <li>
+                There are no assets...
+            </li>
+            {% endfor %}
+        </ul>
+
         <a href="{% url 'cptracker:change_portfolio' portfolio.pk %}">
             Change portfolio
         </a>

@@ -18,7 +18,11 @@ def portfolios(request):
 
 def portfolio(request, portfolio_id):
     portfolio = models.Portfolio.objects.get(id=portfolio_id)
-    context = {'portfolio': portfolio}
+    assets = models.UserAsset.objects.all()
+    context = {
+        'portfolio': portfolio,
+        'assets': assets,
+    }
     return render(request, 'cptracker/portfolio.html', context)
 
 class PortfolioUpdateView(UpdateView):
