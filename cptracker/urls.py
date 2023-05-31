@@ -16,4 +16,10 @@ urlpatterns = [
         name='change_portfolio'
     ),
     path('portfolios/add/', views.PortfolioCreateView.as_view(), name='add_portfolio'),
+    # Assets.
+    path(
+        'portfolios/<int:pk>/add/',
+        views.UserAssetCreateView.as_view(),
+        name='add_userasset',
+    ),
 ]

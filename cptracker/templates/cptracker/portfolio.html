@@ -8,12 +8,15 @@
 <h1>Portfolio</h1>
 <ul>
     <li>
-        <h2>{{ portfolio.name }}</h2>
+        <h2>
+            {{ portfolio.name }} - 
+            <a href="{% url 'cptracker:add_userasset' portfolio.pk %}">Add asset</a>
+        </h2>
         <p>{{ portfolio.date_added }}</p>
         <ul>
             {% for asset in assets %}
             <li>
-                {{ asset.short_name }} - {{ asset.balance }}
+                {{ asset.asset }} - {{ asset.balance }}
             </li>
             {% empty %}
             <li>

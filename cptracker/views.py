@@ -40,3 +40,8 @@ class PortfolioCreateView(CreateView):
     template_name = 'cptracker/add_portfolio.html'
     form_class = forms.PortfolioForm
     success_url = reverse_lazy('cptracker:portfolios')
+
+class UserAssetCreateView(CreateView):
+    template_name = 'cptracker/add_userasset.html'
+    form_class = forms.UserAssetForm
+    success_url = reverse_lazy('cptracker:portfolios')
