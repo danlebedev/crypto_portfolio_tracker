@@ -16,3 +16,6 @@ class Asset(models.Model):
         choices=AssetTypes.choices,
         default=AssetTypes.CRYPTOCURRENCY,
     )
+
+    def __str__(self):
+        return self.short_name
