@@ -45,3 +45,9 @@ class UserAssetCreateView(CreateView):
     template_name = 'cptracker/add_userasset.html'
     form_class = forms.UserAssetForm
     success_url = reverse_lazy('cptracker:portfolios')
+
+class UserAssetUpdateView(UpdateView):
+    model = models.UserAsset
+    template_name = 'cptracker/change_userasset.html'
+    form_class = forms.UserAssetForm
+    success_url = reverse_lazy('cptracker:portfolios')

@@ -16,7 +16,9 @@
         <ul>
             {% for asset in assets %}
             <li>
-                {{ asset.asset }} - {{ asset.balance }}
+                <a href="{% url 'cptracker:change_userasset' portfolio_id=portfolio.pk pk=asset.pk %}">
+                    {{ asset.asset }} - {{ asset.balance }}
+                </a>
             </li>
             {% empty %}
             <li>
